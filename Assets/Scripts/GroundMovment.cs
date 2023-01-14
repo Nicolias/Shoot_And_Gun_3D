@@ -13,12 +13,20 @@ public class GroundMovment : MonoBehaviour
 
     private bool _isGroundMoving;
 
-    private const float _minGroundPositionByX = -8.1f;
-    private const float _maxGroundPositionByX = 28.65f;
+    private const float _revertGroundPosition = 36.75f;
+
+    private float _minGroundPositionByX;
+    private float _maxGroundPositionByX;
+
+    private void Start()
+    {
+        _minGroundPositionByX = transform.position.x;
+        _maxGroundPositionByX = transform.position.x + _revertGroundPosition;
+    }
 
     public IEnumerator MoveToNextStage()
     {
-        if (_isGroundMoving) throw new System.InvalidOperationException("Движение предыдущей стадии еще не закончено");
+        if (_isGroundMoving) throw new InvalidOperationException("Движение предыдущей стадии еще не закончено");
 
         _isGroundMoving = true;
 

@@ -40,7 +40,7 @@ namespace Enemy
         {
             for (int i = 0; i < _enemySpawner.CurrentEnemies.Count; i++)
             {
-                _enemySpawner.CurrentEnemies[i].SetModel(new BaseEnemyModel(_currentWave * 10, _currentWave * 10));
+                _enemySpawner.CurrentEnemies[i].SetModel(new BaseEnemyModel(_currentWave * 5, _currentWave * 5));
             }
         }
     }

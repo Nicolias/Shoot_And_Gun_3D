@@ -11,8 +11,10 @@ namespace GameStateMashine
         private GroundMovment _groundMovment;
         private EnemyWave _enemyWave;
 
-        private BaseState _currentState;
         private Queue<BaseState> _gameStates;
+        private BaseState _currentState;
+
+        public BaseState CurrentState => _currentState;
 
         [Inject]
         public void Construct(GroundMovment groundMovment, EnemyWave enemyWave)

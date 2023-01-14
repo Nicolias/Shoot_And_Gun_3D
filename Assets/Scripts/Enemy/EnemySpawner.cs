@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
     public void SpawnEnemies(List<EnemyView> enemies)
     {
         _enemyViews.Clear();
-        StartCoroutine(SpawnEnemiesAfterEverySeconds(enemies, 0.5f));
+        StartCoroutine(SpawnEnemiesAfterEverySeconds(enemies, 1.5f));
     }
 
     private IEnumerator SpawnEnemiesAfterEverySeconds(List<EnemyView> enemies, float seconds)
@@ -35,8 +35,12 @@ public class EnemySpawner : MonoBehaviour
         foreach (var enemy in enemies)
         {
             EnemyView currentEnemy = _diContainer.InstantiatePrefabForComponent<EnemyView>(enemy);
-            currentEnemy.transform.position = _spawnPositions[Random.Range(0, _spawnPositions.Count)].position;
             _enemyViews.Add(currentEnemy);
+        }
+
+        foreach (var currentEnemy in _enemyViews)
+        {
+            currentEnemy.transform.position = _spawnPositions[Random.Range(0, _spawnPositions.Count)].position;
 
             yield return new WaitForSeconds(seconds);
         }

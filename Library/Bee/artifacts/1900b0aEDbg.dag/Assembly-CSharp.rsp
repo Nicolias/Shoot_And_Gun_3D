@@ -366,6 +366,8 @@
 "Assets/Scripts/Game State Mashine/EnemyAttackState.cs"
 "Assets/Scripts/Game State Mashine/GameStateSwitcher.cs"
 "Assets/Scripts/GroundMovment.cs"
+"Assets/Scripts/Player/Bullet.cs"
+"Assets/Scripts/Player/BulletFactory.cs"
 "Assets/Scripts/Player/Gun.cs"
 "Assets/Scripts/Player/Player.cs"
 -langversion:9.0

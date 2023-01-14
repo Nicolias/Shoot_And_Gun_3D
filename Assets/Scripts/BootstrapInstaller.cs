@@ -10,9 +10,15 @@ public class BootstrapInstaller : MonoInstaller
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private EnemiesPrefab _enemiesPrefab;
     [SerializeField] private Player _player;
+    [SerializeField] private GameStateSwitcher _gameStateSwitcher;
+    [SerializeField] private BulletFactory _bulletFactory;
 
     public override void InstallBindings()
     {
+        Container.Bind<BulletFactory>().FromComponentOn(_bulletFactory.gameObject).AsSingle();
+
+        Container.Bind<GameStateSwitcher>().FromComponentOn(_gameStateSwitcher.gameObject).AsSingle();
+
         Container.Bind<Player>().FromComponentOn(_player.gameObject).AsSingle();
 
         Container.Bind<EnemiesPrefab>().FromScriptableObject(_enemiesPrefab).AsSingle();

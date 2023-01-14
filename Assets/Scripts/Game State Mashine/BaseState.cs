@@ -2,7 +2,7 @@
 
 namespace GameStateMashine
 {
-    abstract class BaseState
+    public abstract class BaseState
     {
         public event Action OnFinished;
 
