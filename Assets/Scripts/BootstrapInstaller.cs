@@ -13,8 +13,20 @@ public class BootstrapInstaller : MonoInstaller
     [SerializeField] private GameStateSwitcher _gameStateSwitcher;
     [SerializeField] private BulletFactory _bulletFactory;
 
+    [SerializeField] private DamageUI _damageUI;
+
+    [SerializeField] private CreditCounter _creditCounter;
+
+    [SerializeField] private StaticData _staticData;
+
     public override void InstallBindings()
     {
+        Container.Bind<DamageUI>().FromComponentOn(_damageUI.gameObject).AsSingle();
+
+        Container.Bind<StaticData>().FromScriptableObject(_staticData).AsSingle();
+
+        Container.Bind<CreditCounter>().FromComponentOn(_creditCounter.gameObject).AsSingle();
+
         Container.Bind<BulletFactory>().FromComponentOn(_bulletFactory.gameObject).AsSingle();
 
         Container.Bind<GameStateSwitcher>().FromComponentOn(_gameStateSwitcher.gameObject).AsSingle();

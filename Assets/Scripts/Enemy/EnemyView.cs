@@ -8,51 +8,57 @@ namespace Enemy
     public class EnemyView : MonoBehaviour
     {
         [SerializeField] private Slider _healthBar;
+        [SerializeField] private Animator _animator;
 
+        [SerializeField] private float _speed;
+
+        private DamageUI _damageUI;
         private Player _player;
+        private CreditCounter _creditCounter;
 
         private BaseEnemyModel _enemyModel;
 
-        private bool _isMoving;
-
-        private const float _attackDuration = 1f;
-        private const float _attackDistance = 1.5f;
-        private const int _speed = 1;
+        [SerializeField] private float _attackDuration;
+        [SerializeField] private float _attackDistance;
 
         private float _nextAttackTime;
+
+        private float _previosPositionByX;
 
         public bool IsDead { get; set; }
 
         [Inject]
-        public void Constract(Player player)
+        public void Constract(Player player, DamageUI damageUI, CreditCounter creditCounter)
         {
             _player = player;
+            _damageUI = damageUI;
+            _creditCounter = creditCounter;
         }
 
         private void Start()
         {
-            _isMoving = true;
+            _previosPositionByX = transform.position.x;
         }
 
         private void Update()
         {
-            if (_isMoving == true)
+            if (Vector2.Distance(transform.position, _player.transform.position) <= _attackDistance)
             {
-                transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
+                if (Time.time < _nextAttackTime)
+                    return;
 
-                if (Vector2.Distance(transform.position, _player.transform.position) <= _attackDistance
-                    && Time.time >= _nextAttackTime)
-                {
-                    _isMoving = false;
+                StartCoroutine(Attack());
+                _nextAttackTime = Time.time + _attackDuration;
 
-                    Attack();
-                    _nextAttackTime = Time.time + _attackDuration;
-                }
+                _animator.SetBool("IsAttack", true);
             }
-            else 
+            else
             {
-                if (Vector2.Distance(transform.position, _player.transform.position) > _attackDistance)
-                    _isMoving = true;
+                transform.SetPositionAndRotation(
+                Vector3.MoveTowards(transform.position, _player.transform.position, Time.deltaTime * _speed),
+                Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_player.transform.position - transform.position), 1));
+
+                MoveAnimation();
             }
         }
 
@@ -60,13 +66,21 @@ namespace Enemy
         {
             _enemyModel.ApplayDamage(damage);
 
+            _damageUI.AddText(damage, transform.position, Color.red);
+
             if (_enemyModel.Health <= 0)
             {
+                _creditCounter.AddMoney(25);
                 Destroy(gameObject);
                 IsDead = true;
             }
 
             _healthBar.value = _enemyModel.Health;
+        }
+
+        public override string ToString()
+        {
+            return gameObject.name;
         }
 
         internal void SetModel(BaseEnemyModel enemyModel)
@@ -78,14 +92,20 @@ namespace Enemy
             _enemyModel = enemyModel;
         }
 
-        private void Attack()
+        private IEnumerator Attack()
         {
+            yield return new WaitForSeconds(0.46f);
+
             _player.ApplayDamage(_enemyModel.Damage);
         }
 
-        public override string ToString()
+        private void MoveAnimation()
         {
-            return gameObject.name;
+            var currentPosition = transform.position.x;
+            _animator.SetBool("IsAttack", false);
+            _animator.SetFloat("Speed", currentPosition - _previosPositionByX);
+
+            _previosPositionByX = transform.position.x;
         }
     }
 }

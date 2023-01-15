@@ -18,11 +18,16 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _attackCoolDown;
     private float _nextAttackTime;
+
+    private DamageUI _damageUI;
+
     private bool _canShooting => _gameStateSwitcher.CurrentState is EnemyAttackState;
 
     [Inject]
-    public void Construct(GameStateSwitcher gameStateSwitcher)
+    public void Construct(GameStateSwitcher gameStateSwitcher, DamageUI damageUI)
     {
+        _damageUI = damageUI;
+
         _gameStateSwitcher = gameStateSwitcher;
         _nextAttackTime = _attackCoolDown;
 
@@ -46,6 +51,8 @@ public class Player : MonoBehaviour
         if (damage <= 0) throw new System.ArgumentOutOfRangeException("Отрицательный урон");
 
         _health -= damage;
+
+        _damageUI.AddText(damage, transform.position, Color.yellow);
 
         _healthSlider.value = _health;
     }

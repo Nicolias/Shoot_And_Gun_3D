@@ -1,0 +1,336 @@
+{
+  "Nodes": [
+    {
+      "Annotation": "all_tundra_nodes",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        1,
+        2,
+        3
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 0
+    },
+    {
+      "Annotation": "ScriptAssemblies",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 1
+    },
+    {
+      "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
+      "DisplayName": "BuildPlayerDataGenerator TypeDb-All",
+      "Action": "\"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Assembly-CSharp.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.AI.Navigation.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Configuration.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Device.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Environments.Internal.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Internal.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Networking.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Registration.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Scheduler.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Telemetry.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Services.Core.Threading.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.TextMeshPro.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.Timeline.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Unity.VisualScripting.State.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/UnityEngine.TestRunner.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/UnityEngine.UI.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Zenject.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Zenject-IntegrationTests.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies/Zenject-IntegrationTests-Editor.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.testtools.codecoverage@1.2.1/lib/ReportGenerator/ReportGeneratorMerged.dll\" -a=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Assets/Plugins/Zenject/Source/Usage\" -s=\"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Managed/UnityEngine\" -s=\"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx\" -s=\"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard\" -s=\"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/NetStandard/Extensions/2.0.0\" -s=\"D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/NetStandard/ref/2.1.0\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/ScriptAssemblies\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.testtools.codecoverage@1.2.1/lib/ReportGenerator\" -s=\"D:/UnityProject/Guns Merge & Shoot 3D/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Inputs": [
+        "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
+        "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
+        "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll",
+        "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll",
+        "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll",
+        "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll",
+        "Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll",
+        "Library/ScriptAssemblies/Assembly-CSharp.dll",
+        "Library/ScriptAssemblies/Unity.AI.Navigation.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Configuration.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Device.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Environments.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Environments.Internal.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Internal.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Networking.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Registration.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Scheduler.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Telemetry.dll",
+        "Library/ScriptAssemblies/Unity.Services.Core.Threading.dll",
+        "Library/ScriptAssemblies/Unity.TextMeshPro.dll",
+        "Library/ScriptAssemblies/Unity.Timeline.dll",
+        "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll",
+        "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll",
+        "Library/ScriptAssemblies/Unity.VisualScripting.State.dll",
+        "Library/ScriptAssemblies/UnityEngine.TestRunner.dll",
+        "Library/ScriptAssemblies/UnityEngine.UI.dll",
+        "Library/ScriptAssemblies/Zenject.dll",
+        "Library/ScriptAssemblies/Zenject-IntegrationTests.dll",
+        "Library/ScriptAssemblies/Zenject-IntegrationTests-Editor.dll",
+        "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll",
+        "Library/PackageCache/com.unity.testtools.codecoverage@1.2.1/lib/ReportGenerator/ReportGeneratorMerged.dll",
+        "Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+      ],
+      "Outputs": [
+        "Library/BuildPlayerData/Editor/TypeDb-All.json"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 2
+    },
+    {
+      "Annotation": "ScriptAssembliesAndTypeDB",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        1,
+        2
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 3
+    }
+  ],
+  "FileSignatures": [
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.BuildTools.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Core.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.CSharpSupport.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.DotNet.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.NativeProgramSupport.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Stevedore.Program.exe"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.TinyProfiler2.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.GNU.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.LLVM.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.VisualStudio.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.Xcode.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.Tools.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.TundraBackend.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Bee.VisualStudioSolution.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/BeeBuildProgramCommon.Data.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/BeeBuildProgramCommon.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/BeeLocalCacheTool.exe"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Newtonsoft.Json.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/NiceIO.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/PlayerBuildProgramLibrary.Data.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/PlayerBuildProgramLibrary.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/ScriptCompilationBuildProgram.Data.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/ScriptCompilationBuildProgram.exe"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/SharpYaml.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Api.Attributes.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Mdb.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Pdb.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Rocks.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Api.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Bee.BuildLogic.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Bee.IL2CPPExeCompileCppBuildProgram.Data.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Linker.Api.dll"
+    },
+    {
+      "File": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline/Unity.Options.dll"
+    },
+    {
+      "File": "Library/Bee/1300b0aEDbgSkipCompile-inputdata.json"
+    }
+  ],
+  "StatSignatures": [
+    {
+      "File": "Assets/csc.rsp"
+    },
+    {
+      "File": "Assets/mcs.rsp"
+    },
+    {
+      "File": "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll"
+    },
+    {
+      "File": "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll"
+    },
+    {
+      "File": "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll"
+    },
+    {
+      "File": "Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll"
+    },
+    {
+      "File": "Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll"
+    },
+    {
+      "File": "Library/Bee/1300b0aEDbgSkipCompile-inputdata.json"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.testtools.codecoverage@1.2.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Assembly-CSharp.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.AI.Navigation.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Configuration.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Device.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Environments.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Environments.Internal.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Internal.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Networking.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Registration.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Scheduler.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Telemetry.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Services.Core.Threading.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Timeline.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.VisualScripting.State.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/UnityEngine.TestRunner.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/UnityEngine.UI.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Zenject-IntegrationTests-Editor.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Zenject-IntegrationTests.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Zenject.dll"
+    }
+  ],
+  "GlobSignatures": [
+    {
+      "Path": "D:/Unity/2021.3.1f1/Editor/2022.2.1f1/Editor/Data/Tools/BuildPipeline"
+    }
+  ],
+  "ContentDigestExtensions": [
+    ".rsp",
+    ".dll",
+    ".exe",
+    ".pdb"
+  ],
+  "StructuredLogFileName": "Library/Bee/tundra.log.json",
+  "StateFileName": "Library/Bee/TundraBuildState.state",
+  "StateFileNameTmp": "Library/Bee/TundraBuildState.state.tmp",
+  "StateFileNameMapped": "Library/Bee/TundraBuildState.state.map",
+  "ScanCacheFileName": "Library/Bee/tundra.scancache",
+  "ScanCacheFileNameTmp": "Library/Bee/tundra.scancache.tmp",
+  "DigestCacheFileName": "Library/Bee/tundra.digestcache",
+  "DigestCacheFileNameTmp": "Library/Bee/tundra.digestcache.tmp",
+  "CachedNodeOutputDirectoryName": "Library/Bee/CachedNodeOutput",
+  "EmitDataForBeeWhy": 0,
+        "NamedNodes": {
+          "all_tundra_nodes": 0,
+          "ScriptAssemblies": 1,
+          "ScriptAssembliesAndTypeDB": 3
+        }
+,  "DefaultNodes": [
+    0
+  ],
+  "SharedResources": [],
+  "Scanners": [],
+  "Identifier": "Library/Bee/1300b0aEDbgSkipCompile.dag.json",
+  "PayloadsFile": "D:/UnityProject/Guns Merge & Shoot 3D/Library/Bee/1300b0aEDbgSkipCompile.dag.payloads",
+  "RelativePathToRoot": "../.."
+}
