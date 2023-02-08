@@ -31,7 +31,7 @@ public class Gun : MonoBehaviour
         if (enemy == null)
             return;
 
-        _bulletFactory.GetBullet().ShootToWithDamage(enemy.transform.position, _currentGunData.Damage, transform.position);
+        _bulletFactory.GetBullet().ShootToWithDamage(enemy.TargetForGun.transform.position, _currentGunData.Damage, transform.position);
     }
 
     private void TryChangeGun()

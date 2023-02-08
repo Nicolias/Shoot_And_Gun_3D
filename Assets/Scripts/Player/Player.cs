@@ -7,6 +7,8 @@ using Zenject;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
+
     [SerializeField] private int _health;
     [SerializeField] private Slider _healthSlider;
 
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
 
     private DamageUI _damageUI;
 
-    private bool _canShooting => _gameStateSwitcher.CurrentState is EnemyAttackState;
+    private bool _canShooting;
 
     [Inject]
     public void Construct(GameStateSwitcher gameStateSwitcher, DamageUI damageUI)
@@ -34,6 +36,19 @@ public class Player : MonoBehaviour
         _healthSlider.maxValue = _health;
         _healthSlider.value = _health;
         _healthSlider.minValue = 0;
+    }
+
+    private void OnEnable()
+    {
+        _gameStateSwitcher.OnStateChanged += ValidateShootState;
+
+        _canShooting = true;
+        ValidateShootState();
+    }
+
+    private void OnDisable()
+    {
+        _gameStateSwitcher.OnStateChanged -= ValidateShootState;
     }
 
     private void Update()
@@ -58,8 +73,12 @@ public class Player : MonoBehaviour
     }
 
     private void ShootToClosestEnemy()
-    {        
-        _gun.ShootTo(FindClosestEnemy());
+    {
+        var closestEnemy = FindClosestEnemy();
+
+        _gun.ShootTo(closestEnemy);
+        if(closestEnemy != null)
+            transform.rotation = Quaternion.LookRotation(closestEnemy.transform.position - transform.position);
     }
 
     private EnemyView FindClosestEnemy()
@@ -109,5 +128,12 @@ public class Player : MonoBehaviour
 
         return enemies;
     }
-}
 
+    private void ValidateShootState()
+    {
+        if(_gameStateSwitcher.CurrentState != null)
+            _canShooting = _gameStateSwitcher.CurrentState is EnemyAttackState;
+
+        _animator.SetBool("CanShooting", _canShooting);
+    }
+}

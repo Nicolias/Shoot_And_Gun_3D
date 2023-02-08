@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Concrete
+  - GasTank
+  - Target
+  - Metal
+  - ExplosiveBarrel
+  - Metal (Static)
+  - Dirt
   layers:
   - Default
   - TransparentFX
@@ -12,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Bullet
   - 
   - 
   - 

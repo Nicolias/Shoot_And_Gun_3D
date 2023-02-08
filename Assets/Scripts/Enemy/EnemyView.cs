@@ -7,6 +7,8 @@ namespace Enemy
 {
     public class EnemyView : MonoBehaviour
     {
+        private Rigidbody _rigidbody;
+
         [SerializeField] private Slider _healthBar;
         [SerializeField] private Animator _animator;
 
@@ -27,6 +29,9 @@ namespace Enemy
 
         public bool IsDead { get; set; }
 
+        [SerializeField] private TargetForGun _targetForGun;
+        public TargetForGun TargetForGun => _targetForGun;
+
         [Inject]
         public void Constract(Player player, DamageUI damageUI, CreditCounter creditCounter)
         {
@@ -37,6 +42,7 @@ namespace Enemy
 
         private void Start()
         {
+            _rigidbody = GetComponent<Rigidbody>();
             _previosPositionByX = transform.position.x;
         }
 

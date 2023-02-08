@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         if (_isMoving == true)
-            transform.position += (_moveDiraction - _spawnPosition).normalized * _speed * Time.deltaTime;
+            transform.position += _moveDiraction.normalized * _speed * Time.deltaTime;
     }
 
     public void ShootToWithDamage(Vector3 dirrection, int damage, Vector3 spawnPosition)
@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
 
         gameObject.SetActive(true);
 
-        _moveDiraction = dirrection;
+        _moveDiraction = dirrection - _spawnPosition;
         _isMoving = true;
         _damage = damage;
         

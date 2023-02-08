@@ -72,6 +72,7 @@ public class Inventory : MonoBehaviour
         _gunList.Remove(secondJIGun);
 
         var newUIGun = _diContainer.InstantiatePrefabForComponent<UIGun>(_uIGunTemplate, firstUiGun.CurrentSlot);
+        newUIGun.CurrentSlot = firstUiGun.CurrentSlot;
         newUIGun.CopyValues(firstUiGun);
         newUIGun.LevelUp();
 
