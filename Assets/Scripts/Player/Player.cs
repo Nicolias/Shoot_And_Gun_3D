@@ -77,8 +77,8 @@ public class Player : MonoBehaviour
         var closestEnemy = FindClosestEnemy();
 
         _gun.ShootTo(closestEnemy);
-        if(closestEnemy != null)
-            transform.rotation = Quaternion.LookRotation(closestEnemy.transform.position - transform.position);
+        //if(closestEnemy != null)
+        //    transform.rotation = Quaternion.LookRotation(closestEnemy.transform.position - transform.position);
     }
 
     private EnemyView FindClosestEnemy()
