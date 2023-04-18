@@ -4,16 +4,17 @@ using Zenject;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] private Inventory _inventory;
+    private Inventory _inventory;
 
     private BulletFactory _bulletFactory;
 
     private UIGun _currentGunData;
 
     [Inject]
-    public void Construct(BulletFactory bulletFactory)
+    public void Construct(BulletFactory bulletFactory, Inventory inventory)
     {
         _bulletFactory = bulletFactory;
+        _inventory = inventory;
     }
 
     private void OnEnable()

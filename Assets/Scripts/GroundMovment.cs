@@ -26,6 +26,8 @@ public class GroundMovment : MonoBehaviour
 
     public IEnumerator MoveToNextStage()
     {
+        yield return new WaitForSeconds(0.1f);
+
         if (_isGroundMoving) throw new InvalidOperationException("Движение предыдущей стадии еще не закончено");
 
         _isGroundMoving = true;

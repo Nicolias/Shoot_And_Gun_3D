@@ -11,6 +11,8 @@ public class BootstrapInstaller : MonoInstaller
     [SerializeField] private EnemiesPrefab _enemiesPrefab;
     [SerializeField] private Player _player;
     [SerializeField] private GameStateSwitcher _gameStateSwitcher;
+
+    [SerializeField] private Inventory _inventory;
     [SerializeField] private BulletFactory _bulletFactory;
 
     [SerializeField] private DamageUI _damageUI;
@@ -28,6 +30,7 @@ public class BootstrapInstaller : MonoInstaller
         Container.Bind<CreditCounter>().FromComponentOn(_creditCounter.gameObject).AsSingle();
 
         Container.Bind<BulletFactory>().FromComponentOn(_bulletFactory.gameObject).AsSingle();
+        Container.Bind<Inventory>().FromComponentOn(_inventory.gameObject).AsSingle();
 
         Container.Bind<GameStateSwitcher>().FromComponentOn(_gameStateSwitcher.gameObject).AsSingle();
 

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Slider _healthSlider;
 
     [SerializeField] private Gun _gun;
+    [SerializeField] private Transform _aimPoint;
 
     [SerializeField] private LayerMask _enemyLayer;
     private GameStateSwitcher _gameStateSwitcher;
@@ -106,6 +107,8 @@ public class Player : MonoBehaviour
 
         _currentEnemy = nearestEnemy;
 
+        _aimPoint.position = _currentEnemy.transform.position;
+
         return nearestEnemy;
     }
 
@@ -135,5 +138,7 @@ public class Player : MonoBehaviour
             _canShooting = _gameStateSwitcher.CurrentState is EnemyAttackState;
 
         _animator.SetBool("CanShooting", _canShooting);
+
+        _nextAttackTime = Time.time + _attackCoolDown;
     }
 }
